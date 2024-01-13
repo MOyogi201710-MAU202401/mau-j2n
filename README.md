@@ -1,5 +1,6 @@
-# 🔴🔴 Google Chromeのビューアーでご覧いただく際には、翻訳の設定は「英語」のままでお読み願います。<br>「日本語」にしますと日本語文が意図しない日本語に自動翻訳されるためです。
-<img width="295" alt="GoogleChrome翻訳設定" src="https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/155648288/836b7646-bd58-4032-85b1-745d1779345d"><br><br>
+# 🔴🔴 Google Chromeのビューアーでご覧いただく際には、翻訳の設定は「英語」を選択してください。<br>
+<img width="295" alt="GoogleChrome翻訳設定" src="https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/155648288/836b7646-bd58-4032-85b1-745d1779345d"><br>
+# 「日本語」を選択しますと日本語文が意図しない日本語に自動翻訳されるためです。<br>
 # 🔴 情報通信ネットワーク　通信授業第１課題
 # １：Gitについて
 Gitはバージョン管理システム（VCS）の１つである。他のVCSとの違いは、他のVCSでは起点となるファイルの集合とそれぞれのファイルに時間の経過とともに加えられた変更の情報つまり差分情報を記録していくが、Gitでは起点となるファイルの集合を記録したあとは差分ではなくその時点のファイルの状態（スナップショット）を時系列にコミット（記録）していく。コミットを蓄積していく場所をリポジトリという。<br>
@@ -115,7 +116,7 @@ WebのGitの日本語訳ではわかりにくいため該当箇所を「いち�
 ### 🔵 $\textcolor{blue}{\text{2023/8/13}}$
 最新バージョンのGitでかつTerminalを使用するためGitのウェブサイト http://git-scm.com/download/mac からダウンロードする。<br>
 
-現時点、$\textcolor{blue}{\text{最新バージョンは2.41.0}}$ であるが、
+現時点、 $\textcolor{blue}{\text{最新バージョンは2.41.0}}$ であるが、
 $\textcolor{red}{\text{Binalyでは2.33.0}}$ と記載されているにも関わらず違いにすぐに気づかず $\textcolor{red}{\text{Binalyでインストールしてしまった}}$ 。<br>
 一旦　rm '/usr/local/bin/git'　を実行して削除する。<br><br>
 $\textcolor{red}{\text{HomebrewでGitインストールのやり直しを行う}}$ 準備をする。<br>
@@ -131,7 +132,7 @@ already exists. You may want to remove it:<br>
 
 次に出たメッセージはWarningでgit 2.41.0_2 はすでにインストール済みでリンクされていないとあり　**braw link git** を実行すればリンクできるということで **brew link git** を実行したところ、**'usr/local/bin/git-cvsserver'　がすでに存在する**　エラーとなる。<br><br>
 $\textcolor{blue}{\text{rm 'usr/local/bin/git-cvsserver}}$ <br>を実行すればよいとのことでこのコマンドを実行する。<br>
-その後、再度　$\textcolor{blue}{\text{brew link --overwrite git}}$ を実行したところ<br><br>
+その後、 $\textcolor{blue}{\text{brew link --overwrite git}}$ を実行したところ<br><br>
 $\textcolor{blue}{\text{バージョン2.41.0に更新された。}}$
 # -🔴gitセットアップ
 ### 🔵 $\textcolor{blue}{\text{2023/8/16}}$
@@ -218,7 +219,7 @@ main は自動で作られたブランチの名称。
 - ## -🔴git push
 ### 🔵 $\textcolor{blue}{\text{2024/1/6}}$
 プッシュで変更内容をGithubのリモートリポジトリに反映する。<br>
-git push の後ろにはブランチ名を指定したが$\textcolor{red}{\text{エラー}}$となった。<br>
+git push の後ろにはブランチ名を指定したが $\textcolor{red}{\text{エラー}}$ となった。<br>
 **$\textcolor{red}{\text{git push main}}$**<br>
 fatal: 'main' does not appear to be a git repository<br>
 fatal: Could not read from remote repository.<br><br>
@@ -244,11 +245,11 @@ GitHubのアカウントを決める際、個人情報のセキュリティを�
 - 複数のGitアカウントを使いわけることができる
 ### 🔵 $\textcolor{blue}{\text{2024/1/4}}$
 - GitHubにアカウント登録し **mau-j2n** リポジトリを作成する。
-- SSHキーを作成する：タイトルはforMAU
+- SSHキーを作成する
 
 正しくSSHキーを設定できたかを確認する。<br>
 **ssh -T `git@github.com`**<br>
-Hi MOyogi201710-MAU202401! You've successfully authenticated<br>
+
 # -🔴githubへの公開方法
 ### 🔵 $\textcolor{blue}{\text{2023/11/19}}$
 Visual Studio CodeでMarkdownファイルを作成する。<br>
@@ -274,7 +275,8 @@ README.md<br>
 nothing added to commit but untracked files present (use "git add" to track)<br>
 
 ### 🔵 $\textcolor{blue}{\text{2024/1/8}}$
-$\textcolor{red}{\text{Google Chromeのビューアーでは自動翻訳が起動し、日本語を日本語に翻訳してしまい意味のなさない文章になってしまうことに気づく。}}$<br>
+$\textcolor{red}{\text{Google Chromeのビューアーでは自動翻訳が起動し、}}$<br>
+$\textcolor{red}{\text{日本文が意図しない日本語に翻訳される。}}$<br>
 インターネットで解決策を探す。<br>
 以下の内、シンプルな方法`<code>` `</code>` で囲む方法にすることとする。
 - https://qiita.com/ishiyama0530/items/8f8afc6c36ca8ea4df56<br>
@@ -284,7 +286,7 @@ $\textcolor{red}{\text{Google Chromeのビューアーでは自動翻訳が起�
 ### 🔵 $\textcolor{blue}{\text{2024/1/13}}$
 - 文字に色を設定する方法を探しHTMLの構文が使えるということで試す。
   - `<font color="色">`、`<span style="color: 色"></span>`　ともにChromeでもSafariでも有効にならない。
-  - $\textcolor{red}{\text{Commitする際に記載するコメントもChromeでは日本語を別の日本語に翻訳してしまうため、要注意。}}$
+  - $\textcolor{red}{\text{Commitする際に記載する日本語コメントも別日本語に翻訳される。}}$
   - 行間が広がりすぎるため、`<code>`も`<Pre>`も使わないこととした。
   - $\textcolor{red}{\text{文字の色を設定する方法を見つける}}$<br>
 https://kanoe.studio/archives/1824/<br>
