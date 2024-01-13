@@ -1,3 +1,4 @@
+<pre>
 <code>
 
 # 🔴 情報通信ネットワーク　通信授業第１課題
@@ -277,9 +278,10 @@ nothing added to commit but untracked files present (use "git add" to track)<br>
 - https://qiita.com/nkmr_jp/items/488a9a321ed938bf543f
 - https://penpen-dev.com/blog/translate-no-code/
 
-### 🔵 <span style="color:blue">2024/1/13</span>
+### 🔵 `rgb(0,106,182)`2024/1/13
 `<font color="red">`がChromeでもSafariでも有効にならない
 `<span style="color: 色"></span>`を試してみる。
 
 
 </code>
+</pre>
