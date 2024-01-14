@@ -1,7 +1,8 @@
 # 🔴🔴 Google Chromeのビューアーでご覧いただく際には、翻訳の設定は「英語」を選択してください。<br>
-<img width="295" alt="GoogleChrome翻訳設定" src="https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/155648288/836b7646-bd58-4032-85b1-745d1779345d"><br>
-# 「日本語」を選択しますと日本語文が意図しない日本語に自動翻訳されるためです。<br>
-# 🔴 情報通信ネットワーク　通信授業第１課題
+![GoogleChrome翻訳設定](images/GoogleChrome翻訳設定.png)<br>
+# 「日本語」を選択しますと日本語文が意図しない日本語文に自動翻訳されるためです。<br>
+# 🔵課題名　： 情報通信ネットワーク　第１課題
+# 🔵課題内容：Git,GitHubについてのリサーチと実践
 # １：Gitについて
 Gitはバージョン管理システム（VCS）の１つである。他のVCSとの違いは、他のVCSでは起点となるファイルの集合とそれぞれのファイルに時間の経過とともに加えられた変更の情報つまり差分情報を記録していくが、Gitでは起点となるファイルの集合を記録したあとは差分ではなくその時点のファイルの状態（スナップショット）を時系列にコミット（記録）していく。コミットを蓄積していく場所をリポジトリという。<br>
 ファイルに変更が無い場合は、Gitはファイルを再記録せず、既に記録してある以前の同一のファイルへのリンクを記録する。  
@@ -52,9 +53,9 @@ DVCS(Git、Mercurial、Bazaar、Darcsのようなもの)では、クライア
 #### 🔸🔸 Gitと他VCSとの違い
 スナップショットであって、差分ではない。<br><br>
 概念的には、他のシステムのほとんどは、情報をファイルを基本とした変更のリストとして格納する。これらのシステム(CVS、Subversion、Perforce、Bazaar等々)は、システムが保持しているファイルの集合と、時間を通じてそれぞれのファイルに加えられた変更の情報を考える。<br>
-<img width="425" alt="CVS等" src="https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/155648288/a1b98420-3843-48ad-91c2-dbb83524780b"><br><br>
+![CVS等](images/CVS等.png)<br><br>
 Gitはデータをミニ・ファイルシステムのスナップショットの集合のように考える。<br>
-<img width="425" alt="Git" src="https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/155648288/6594a7c9-bc4c-4911-a924-4f6d41f5d71d"><br><br>
+![Git](images/Git.png)<br><br>
 Gitで全てのコミットをするとき、もしくはプロジェクトの状態を保存するとき、Gitは基本的に、その時の全てのファイルの状態のスナップショットを撮り、そのスナップショットへの参照を格納する。効率化のため、ファイルに変更が無い場合は、Gitはファイルを再格納せず、既に格納してある、以前の同一のファイルへのリンクを格納する。<br>
 プロジェクトの履歴は丸ごとローカル・ディスクに保持しているため、Gitはサーバーに履歴を取得しに行って表示する必要がない。<br>
 あるファイルの現在のバージョンと、そのファイルの1ヶ月前の間に導入された変更点を知りたいのであれば1か月前のファイルを調べてローカルで差分の計算を行なえる。<br>
@@ -74,7 +75,7 @@ Gitの管理対象フォルダの中には.gitという隠しフォルダが作�
 3. ステージングエリア内のファイルをGitディレクトリにコミットする。
     - 一度コミットにより記録された内容は変更・削除されない。仮にあとからコミットを取り消す操作を行うと、取り消す前後の状態が記録として残るため、コミット自体がなかったことにはならない。
     
-<img width="425" alt="GitWorkFlow" src="https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/155648288/ac246f66-7f93-4e97-869c-493b30444499"><br><br>
+![GitWorkFlow](images/GitWorkFlow.png)<br><br>
 
 コミットによりファイルの状態は再び「unmodified（変更されていない）」状態となる。
 なお、新規ファイルを作成した場合のファイルの状態は「untracked（追跡されていない）」状態であり、まだ一度もコミットされたことのないファイルのため、Git管理下に置かれていない。
@@ -299,4 +300,46 @@ https://kanoe.studio/archives/1824/<br>
   - 画像ファイルをREANDME.mdファイルが入っているフォルダに保存する。
   - 構文`![alt用テキスト](相対パス付き画像ファイル名)`を設定する。
 - GitHub上で画像を表示するために GitHub のIssueで各画像ファイルをドラッグドロップしてアップする。そこで作成されたURLをREADME.mdに貼り付ける。
-- プライベートからパブリックに変更し課題提出の準備をする。
+
+### 🔵 $\textcolor{blue}{\text{2024/1/14}}$
+#### 画像をアップロードする方法の間違いに気づく<br>
+- 画像の入れ替えのバージョン管理を考えると、同じリポジトリに入れる必要があることに気づく。
+- 今までステージングエリアにはREADME.mdファイルのみを記録していたが、画像ファイルが入っているフォルダも対象になる。<br>
+#### 「git add $\textcolor{red}{\text{.}}$ 」でローカルリポジトリ「mau-j2n」直下すべてのファイルをステージングエリアに記録することとする
+- GitHubで表示するように別途URL指定で画像を表示していたが、元の構文`![alt用テキスト](相対パス付き画像ファイル名)`に戻すこととする。
+
+git statusで結果を確認する。<br><br>
+On branch main<br>
+Your branch is up to date with 'origin/main'.<br>
+
+Changes to be committed:<br>
+  (use "git restore --staged `<file>`..." to unstage)<br>
+	new file:   .DS_Store <br>
+	modified:   README.md <br>
+	new file:   images/.DS_Store <br>
+	new file:   "images/CVS\347\255\211.png" <br>
+	new file:   images/Git.png <br>
+	new file:   images/GitWorkFlow.png <br>
+	new file:   "images/ <br>
+  GoogleChrome\347\277\273\350\250\263\350\250\255\345\256\232.png" <br>
+
+  #### ここで疑問：.DS_Store　とは何か？
+  git status で結果を確認したところ　.DS_Store、images/.DS_Store　の見知らぬファイルに気づく。<br>
+  ネットで調べたところMacで自動で作成されるメタ情報のファイルということでGitHubにpushする必要がないとのこと。<br>
+ステージングエリアに登録されないよう **.gitignore** ファイルをローカルリポジトリに作成することとする。<br>
+
+  #### 昨日GitHubにアップロードした画像を削除したい
+  昨日画像をIssueでアップしたがこれは問題のある場合に公開するということで、これは間違えたアップロードのため削除する方法を探す。<br>
+  **Issue の削除方法：**<br>
+  https://docs.github.com/ja/issues/tracking-your-work-with-issues/deleting-an-issue<br><br>
+  Issueを削除しようとしたところ公開されていなかった。最後の公開ボタンをクリックしていなかったからである。<br>
+https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/ の下に画像が保存されていることは確認できた。
+<br>
+実体は　https://private-user-images.githubusercontent.com/　にあることを確認する。<br>
+
+さらに調べたところ、2023年5月のGitHubのアップデートにより、プライベートリポジトリの Issue などにアップロードされた画像ファイルの閲覧が認証必須となったとのこと。<br>
+https://dev.classmethod.jp/articles/github-more-secure-private-attachments/<br>
+
+とりあえずはIssueとしては公開されていないようなので、今回はこのまま課題完成までを進めていく。<br>
+後日にじっくりと画像を削除する方法を調べることとする。<br>
+
