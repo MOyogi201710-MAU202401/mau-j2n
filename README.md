@@ -273,8 +273,10 @@ No commits yet<br>
 Untracked files:<br>
 (use "git add `<file>``..." to include in what will be committed)<br>
 README.md<br>
-nothing added to commit but untracked files present (use "git add" to track)<br>
+nothing added to commit but untracked files present (use "git add" to track)<br><br>
+課題提出する直前までは公開範囲はプライベートのままとする。<br><br>
 
+# 6：README.mdの見直し作業
 ### 🔵 $\textcolor{blue}{\text{2024/1/8}}$
 $\textcolor{red}{\text{Google Chromeのビューアーでは自動翻訳が起動し、}}$<br>
 $\textcolor{red}{\text{日本文が意図しない日本語に翻訳される。}}$<br>
@@ -375,6 +377,12 @@ https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/ の下に画像が保�
 https://dev.classmethod.jp/articles/github-more-secure-private-attachments/<br>
 
 課題提出直前に、**公開範囲をプライベートからパブリックに切り替える**こととする。<br>
+1. Settingsをクリック
+2. １番下にある「Danger Zone」までスクロール
+3. Change visibilityをクリック
+4. Publicに切り替え
+5. 完了
+
 
 ## 意図せずに体験できたこと
 第１４回目のコミット分はpushせずに第１５回目をpushしたところ第１４回目はpushされていなかった。１４回も同時にpushされると思い込んでいた。<br>
