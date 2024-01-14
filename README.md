@@ -326,13 +326,37 @@ Changes to be committed:<br>
   #### ここで疑問：.DS_Store　とは何か？
   git status で結果を確認したところ　.DS_Store、images/.DS_Store　の見知らぬファイルに気づく。<br>
   ネットで調べたところMacで自動で作成されるメタ情報のファイルということでGitHubにpushする必要がないとのこと。<br>
-ステージングエリアに登録されないよう **.gitignore** ファイルをローカルリポジトリに作成することとする。<br>
+ステージングエリアに登録されないようVisual Studio Codeにて **.gitignore** ファイルをローカルリポジトリに作成することとする。<br>
+
+現時点でgit statusで状態を確認する。<br>
+Untracked files:<br>
+  (use "git add <file>..." to include in what will be committed)<br>
+	.gitignore<br>
+
+.gitignoreファイルをステージングエリアに登録し、その後コミットしておく。<br>
+$\textcolor{red}{\text{失敗}}$ <br>
+先にステージングエリアに入っているファイルを削除しておくべきであった。<br>
+.gitignoreファイルはワーキングエリアに入っているファイルをステージングエリアに登録したくない場合に使用されるため、<br>
+$\textcolor{red}{\text{すでにステージングエリアに入っているファイルを無視することはできない}}$。<br>
+pushまで実行したため、GitHubにある不要ファイルを削除する。<br>
+大元である.DS_Storeファイルを削除しても影響がないとのことなのでコマンドラインにて削除することとする。<br>
+https://discussionsjapan.apple.com/thread/10058768?sortBy=best<br>
+
+**git rm .DS_Store** <br>
+On branch main<br>
+Your branch is up to date with 'origin/main'.<br>
+
+Changes to be committed:<br>
+  (use "git restore --staged <file>..." to unstage)<br>
+	deleted:    .DS_Store<br>
+<br>
+
 
   #### 昨日GitHubにアップロードした画像を削除したい
   昨日画像をIssueでアップしたがこれは問題のある場合に公開するということで、これは間違えたアップロードのため削除する方法を探す。<br>
   **Issue の削除方法：**<br>
   https://docs.github.com/ja/issues/tracking-your-work-with-issues/deleting-an-issue<br><br>
-  Issueを削除しようとしたところ公開されていなかった。最後の公開ボタンをクリックしていなかったからである。<br>
+  Issueを削除しようとしたところ公開されていなかった。最後の「Submit New Issue」ボタンをクリックしていなかったからである。<br>
 https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/ の下に画像が保存されていることは確認できた。
 <br>
 実体は　https://private-user-images.githubusercontent.com/　にあることを確認する。<br>
