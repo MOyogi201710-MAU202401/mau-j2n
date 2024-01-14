@@ -22,7 +22,7 @@ GitHub向けのMarkdownとしてGitHub Flavored Markdownがある。基本的な
 # ５：記録
 # -🔴gitとは
 ### 🔵 $\textcolor{blue}{\text{2023/2/4}}$
-https://git-scm.com/book/ja/v2/ から日本語版ProGit.pdfをダウンロードし目次と前書きを印刷する。<br.>
+https://git-scm.com/book/ja/v2/ から日本語版ProGit.pdfをダウンロードし目次と前書きを印刷する。<br>
 - 目次と前書きを読み、Gitの基本概念を理解するために該当すると思われる目次のタイトルにマークしておく。それ以外は実際に使用する際のコマンドなどであると考える。
 - 課題の進め方をまとめる。
 - 本格的に課題に取り組む前はメモで記録を取っていく。
@@ -351,6 +351,16 @@ Changes to be committed:<br>
 	deleted:    .DS_Store<br>
 <br>
 
+imageフォルダ内の.DS_Storeファイルも削除を試みたが以下のメッセージが出たため直接imagesフォルダ内を確認したところ既にファイルがなくなっていた。<br>
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)<br>
+	deleted:    images/.DS_Store<br>
+
+  結局このメッセージに従って以下のコマンドを実行してこのメッセージが以降に出ないようにしておく。<br>
+  git restore images/.DS_Store<br>
+
+  これに関しては後日に調べておく。GitHubのImagesフォルダ内にはまだ残っているため。<br>
 
   #### 昨日GitHubにアップロードした画像を削除したい
   昨日画像をIssueでアップしたがこれは問題のある場合に公開するということで、これは間違えたアップロードのため削除する方法を探す。<br>
@@ -364,6 +374,15 @@ https://github.com/MOyogi201710-MAU202401/mau-j2n/assets/ の下に画像が保�
 さらに調べたところ、2023年5月のGitHubのアップデートにより、プライベートリポジトリの Issue などにアップロードされた画像ファイルの閲覧が認証必須となったとのこと。<br>
 https://dev.classmethod.jp/articles/github-more-secure-private-attachments/<br>
 
-とりあえずはIssueとしては公開されていないようなので、今回はこのまま課題完成までを進めていく。<br>
-後日にじっくりと画像を削除する方法を調べることとする。<br>
+課題提出直前に、**公開範囲をプライベートからパブリックに切り替える**こととする。<br>
+
+## 意図せずに体験できたこと
+第１４回目のコミット分はpushせずに第１５回目をpushしたところ第１４回目はpushされていなかった。１４回も同時にpushされると思い込んでいた。<br>
+当たり前のことであるが、リモートリポジトリに毎回ローカルリポジトリのコミット済みのものを反映する必要はなく、反映したいタイミングでpushするということを体験できた。<br>
+また、理解していたつもりが理解していなかったことに気づけた。
+
+
+## 取り残している問題
+- ローカルリポジトリのImagesフォルダ内の.DS_Storeファイルが削除されたのは、上の階層の.DS_Storeファイルが削除されたタイミングなのか、GitHubのImagesフォルダ内の.DS_Storeファイルを削除するにはどうすればよいかを調べることとする。
+- GitHubにアップロードした画像は、Issueとしては公開されていないようなので、今回はこのまま課題完成までを進めていくが、後日にじっくりと画像を削除する方法を調べることとする。<br>
 
